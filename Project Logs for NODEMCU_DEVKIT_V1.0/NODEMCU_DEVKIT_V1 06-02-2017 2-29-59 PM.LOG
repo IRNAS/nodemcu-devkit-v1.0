@@ -1,0 +1,8 @@
+Added Component: Designator=R15(SMT_R_0402)
+Added Component: Designator=R16(SMT_R_0402)
+Added Pin To Net: NetName=GPIO5 Pin=R15-1
+Added Pin To Net: NetName=VDD3V3 Pin=R15-2
+Added Pin To Net: NetName=GPIO4 Pin=R16-1
+Added Pin To Net: NetName=VDD3V3 Pin=R16-2
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R15 10k
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R16 10k

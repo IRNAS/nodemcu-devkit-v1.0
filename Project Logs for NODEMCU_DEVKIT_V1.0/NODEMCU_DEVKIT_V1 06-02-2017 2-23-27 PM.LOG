@@ -1,0 +1,52 @@
+Removed Pin From Net: NetName=VDD3V3 Pin=C8-1
+Removed Pin From Net: NetName=VDD5V Pin=D1-2
+Removed Pin From Net: NetName=GPIO16 Pin=LED1-2
+Removed Pin From Net: NetName=VDD3V3 Pin=U2-6
+Removed Pin From Net: NetName=VDD3V3 Pin=U2-7
+Removed Pin From Net: NetName=VDD3V3 Pin=U4-2
+Removed Pin From Net: NetName=VDD3V3 Pin=U4-2
+Removed Member From Class: ClassName=03_USB_TO_UART Member=C3
+Removed Member From Class: ClassName=03_USB_TO_UART Member=C4
+Added Component: Designator=D2(SOD-323 2L)
+Added Component: Designator=F1(FUSE0603)
+Added Component: Designator=R15(RES0603)
+Added Component: Designator=R16(RES0603)
+Added Component: Designator=R18(RES0603)
+Added Component: Designator=TP1(TEST_POINT)
+Added Component: Designator=TP2(TEST_POINT)
+Added Component: Designator=TP3(TEST_POINT)
+Added Component: Designator=TP4(TEST_POINT)
+Added Pin To Net: NetName=ADC Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=VDD5V Pin=F1-2
+Added Pin To Net: NetName=GPIO5 Pin=R15-1
+Added Pin To Net: NetName=VDD3V3 Pin=R15-2
+Added Pin To Net: NetName=GPIO4 Pin=R16-1
+Added Pin To Net: NetName=VDD3V3 Pin=R16-2
+Added Pin To Net: NetName=VDD3V3 Pin=R18-2
+Added Pin To Net: NetName=D_N Pin=TP1-1
+Added Pin To Net: NetName=VDDUSB Pin=TP2-1
+Added Pin To Net: NetName=D_P Pin=TP3-1
+Added Pin To Net: NetName=GND Pin=TP4-1
+Added Pin To Net: NetName=VDDUSB Pin=U2-7
+Added Pin To Net: NetName=NetC8_1 Pin=C8-1
+Added Pin To Net: NetName=NetC8_1 Pin=R18-1
+Added Pin To Net: NetName=NetC8_1 Pin=U4-2
+Added Pin To Net: NetName=NetC8_1 Pin=U4-2
+Added Net: Name=NetC8_1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=F1-1
+Added Net: Name=NetD1_2
+Added Pin To Net: NetName=NetLED1_2 Pin=LED1-2
+Added Net: Name=NetLED1_2
+Added Member To Class: ClassName=04_POWER Member=Component C3 10uF
+Added Member To Class: ClassName=04_POWER Member=Component C4 100nF
+Added Member To Class: ClassName=07_ADC Member=Component D2 BAT54HT1G
+Added Member To Class: ClassName=04_POWER Member=Component F1 750mA
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R15 10k
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R16 10k
+Added Member To Class: ClassName=04_POWER Member=Component R18 0R
+Added Member To Class: ClassName=03_USB_TO_UART Member=Component TP1 TEST_POINT
+Added Member To Class: ClassName=03_USB_TO_UART Member=Component TP2 TEST_POINT
+Added Member To Class: ClassName=03_USB_TO_UART Member=Component TP3 TEST_POINT
+Added Member To Class: ClassName=03_USB_TO_UART Member=Component TP4 TEST_POINT

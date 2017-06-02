@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=NetC8_1 Pin=R18-1
+Removed Pin From Net: NetName=VDD3V3 Pin=R18-2
+Added Component: Designator=R18(SMT_R_0402)
+Added Pin To Net: NetName=VDD3V3 Pin=R18-1
+Added Pin To Net: NetName=NetC8_1 Pin=R18-2
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R15 10k
+Added Member To Class: ClassName=02_ESP12_CORE Member=Component R16 10k

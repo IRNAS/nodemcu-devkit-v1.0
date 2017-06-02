@@ -1,0 +1,7 @@
+DRC Rules Export File for PCB: C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc
+RuleKind=Clearance|RuleName=Clearance_Diff|Scope=Board|Minimum=6.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7.00
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Clearance_Polygon|Scope=Board|Minimum=15.00

@@ -1,0 +1,14 @@
+Output: koruza_CM_NC Drill Files
+Type  : NC Drill
+From  : PCB Document [NODEMCU_DEVKIT_V1.0.PcbDoc]
+   Generated File[NODEMCU_DEVKIT_V1.0-RoundHoles.TXT]
+   Generated File[NODEMCU_DEVKIT_V1.0-SlotHoles.TXT]
+   Generated File[NODEMCU_DEVKIT_V1.0.DRL]
+   Generated File[NODEMCU_DEVKIT_V1.0.LDP]
+   Generated File[NODEMCU_DEVKIT_V1.0.DRR]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 4:45:41 PM On 06/02/2017

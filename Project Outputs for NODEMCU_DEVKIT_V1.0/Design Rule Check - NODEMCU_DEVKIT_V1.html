@@ -1,0 +1,390 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">06/02/2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:39:20 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc" class="file"><acronym title="C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc">C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">18</td></tr>
+</table>
+</td>
+</table><a name="IDPEUEEJU5QB51KEZNNT22A1GJFBI2R50N0EVBNQFJNLGDWSILQCBC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXFEEWAYKWYGWHWYAYJBHYMABFNQSKDSLQ5U13RJX4K5XBOEU5XGJ">Clearance Constraint (Gap=6mil) (InNet('D_N')),(InNet('D_P'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDODCGHSYUAQ3DPGF3PFPM30T5ADHRCLNLESZHEUGANYEH3UEM0GBB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1PLDAGEBGOHULDHLZM1XNVHUWBWBJXA0V3XVENE2AZ3O1PTKEPGE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5B1EIHK13BOVOA4XMCFB243GVEHXQ3H513HRNWHL30RBHF1XWZDN">Clearance Constraint (Gap=7mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIZPPUXTKYXCFINYSZNIJQA05UJSLTGNGN4MAQYF1QZHIUNS3XQEK">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSJDUY1WR4DKSNMSZVHYB2DJCVFCWG5FVWLGJ5IPFRWZXL5XEX21K">Width Constraint (Min=7mil) (Max=300mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPMRTKVIMEUNVJVOMC0ACR5HDYICCUYCIYVPIWZB0VSPLNW22HL4O">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1XQP3F1AJSNTFJMHUC0URUWGCPCM2BHAKDMN5TICPDTTBTZQ20XB">Hole Size Constraint (Min=11.811mil) (Max=196.85mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZYKYZ3MWSVTSBW2BQC3DQNXUMOMSPJC0FF1CQICVCIFDKWNWCIO">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4F2LBFDFKGW2OFDX4IOR5E2D2BE3LAVEUE5A44FRXU4H01WVNKYL">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID13J5BOGVX3V1EJFVFFVGNH3B0I44U5S2MNUSIFIRHF0XZGS2ULRE">Silk To Solder Mask (Clearance=10mil) (Disabled)(IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDELFMXLCQ0FNQOOK5P0BL5ZG4VBEVLWIOYRW5STKRXNRKQQSREICI">Silk to Silk (Clearance=10mil) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJVLLSKOKJOIZPOQFF1ZFJUQJGKEPHKWE5SNS0HPZV035ZTLJNQPE">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDGX2RBBNP42SE2WCSTOTHZO4MJZILYLJ2GSJKOEYMZPI50ANNATP">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXF3MOADFGICZOTSXCKR3QOICRKRFCEU0ZUQ1FXLG2DBA4DROWFSL">Clearance Constraint (Gap=15mil) (InNamedPolygon('Bottom Layer-GND') Or InNamedPolygon('Top Layer-GND')),(IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">18</td>
+</tr>
+</table><br><a name="ID4F2LBFDFKGW2OFDX4IOR5E2D2BE3LAVEUE5A44FRXU4H01WVNKYL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3193.186mil|Location2.X=3204.436mil|Location1.Y=2520.544mil|Location2.Y=2531.794mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3193.186mil|Location2.X=3204.436mil|Location1.Y=2520.544mil|Location2.Y=2531.794mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.173mil &lt; 10mil) Between Pad U2-1(106.055mil,-970.583mil) on Top Layer And Pad U2-28(145.425mil,-1009.953mil) on Top Layer [Top Solder] Mask Sliver [8.173mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3193.178mil|Location2.X=3204.428mil|Location1.Y=2376.86mil|Location2.Y=2388.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3193.178mil|Location2.X=3204.428mil|Location1.Y=2376.86mil|Location2.Y=2388.11mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.173mil &lt; 10mil) Between Pad U2-21(106.047mil,-1167.417mil) on Top Layer And Pad U2-22(145.417mil,-1128.047mil) on Top Layer [Top Solder] Mask Sliver [8.173mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3049.485mil|Location2.X=3060.735mil|Location1.Y=2376.844mil|Location2.Y=2388.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3049.485mil|Location2.X=3060.735mil|Location1.Y=2376.844mil|Location2.Y=2388.094mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.173mil &lt; 10mil) Between Pad U2-14(-51.425mil,-1128.063mil) on Top Layer And Pad U2-15(-12.055mil,-1167.433mil) on Top Layer [Top Solder] Mask Sliver [8.173mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3049.485mil|Location2.X=3060.735mil|Location1.Y=2520.544mil|Location2.Y=2531.794mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3049.485mil|Location2.X=3060.735mil|Location1.Y=2520.544mil|Location2.Y=2531.794mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.173mil &lt; 10mil) Between Pad U2-7(-12.055mil,-970.583mil) on Top Layer And Pad U2-8(-51.425mil,-1009.953mil) on Top Layer [Top Solder] Mask Sliver [8.173mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2929.962mil|Location2.X=2941.212mil|Location1.Y=2605.357mil|Location2.Y=2616.607mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2929.962mil|Location2.X=2941.212mil|Location1.Y=2605.357mil|Location2.Y=2616.607mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.177mil &lt; 10mil) Between Pad R19-2(-143.244mil,-929.933mil) on Top Layer And Pad R10-2(-130.373mil,-894.756mil) on Top Layer [Top Solder] Mask Sliver [7.177mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3299.172mil|Location2.X=3310.422mil|Location1.Y=2724.635mil|Location2.Y=2735.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3299.172mil|Location2.X=3310.422mil|Location1.Y=2724.635mil|Location2.Y=2735.885mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (7.185mil &lt; 10mil) Between Pad R17-1(207.244mil,-779.067mil) on Top Layer And Pad VT2-1(251.13mil,-776.117mil) on Top Layer [Top Solder] Mask Sliver [7.185mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3036.086mil|Location2.X=3047.336mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3036.086mil|Location2.X=3047.336mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.5mil &lt; 10mil) Between Pad U3-2(-25.5mil,-1270mil) on Top Layer And Pad U3-1(-51mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [2.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.189mil|Location2.X=3020.439mil|Location1.Y=2247.702mil|Location2.Y=2258.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3009.189mil|Location2.X=3020.439mil|Location1.Y=2247.702mil|Location2.Y=2258.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.293mil &lt; 10mil) Between Pad U3-8(-95.5mil,-1270mil) on Multi-Layer And Pad U3-1(-51mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [5.293mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3087.086mil|Location2.X=3098.336mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3087.086mil|Location2.X=3098.336mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.5mil &lt; 10mil) Between Pad U3-3(0mil,-1270mil) on Top Layer And Pad U3-4(25.5mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [2.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3112.586mil|Location2.X=3123.836mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3112.586mil|Location2.X=3123.836mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.5mil &lt; 10mil) Between Pad U3-5(51mil,-1270mil) on Top Layer And Pad U3-4(25.5mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [2.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3139.482mil|Location2.X=3150.732mil|Location1.Y=2247.702mil|Location2.Y=2258.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3139.482mil|Location2.X=3150.732mil|Location1.Y=2247.702mil|Location2.Y=2258.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.293mil &lt; 10mil) Between Pad U3-9(95.5mil,-1270mil) on Multi-Layer And Pad U3-5(51mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [5.293mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2877.092mil|Location2.X=2888.342mil|Location1.Y=2569.078mil|Location2.Y=2580.328mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2877.092mil|Location2.X=2888.342mil|Location1.Y=2569.078mil|Location2.Y=2580.328mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.382mil &lt; 10mil) Between Pad R19-1(-183.244mil,-929.933mil) on Top Layer And Pad LED1-2(-192.496mil,-977mil) on Top Layer [Top Solder] Mask Sliver [9.382mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2921.147mil|Location2.X=2932.397mil|Location1.Y=2569.078mil|Location2.Y=2580.328mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2921.147mil|Location2.X=2932.397mil|Location1.Y=2569.078mil|Location2.Y=2580.328mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.382mil &lt; 10mil) Between Pad R19-2(-143.244mil,-929.933mil) on Top Layer And Pad LED1-1(-129.504mil,-977mil) on Top Layer [Top Solder] Mask Sliver [9.382mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2746.997mil|Location2.X=2758.247mil|Location1.Y=2389.611mil|Location2.Y=2400.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2746.997mil|Location2.X=2758.247mil|Location1.Y=2389.611mil|Location2.Y=2400.861mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.583mil &lt; 10mil) Between Pad F1-1(-345mil,-1154.567mil) on Top Layer And Pad D1-2(-307mil,-1108.898mil) on Top Layer [Top Solder] Mask Sliver [5.583mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3061.586mil|Location2.X=3072.836mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3061.586mil|Location2.X=3072.836mil|Location1.Y=2216.702mil|Location2.Y=2227.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.5mil &lt; 10mil) Between Pad U3-2(-25.5mil,-1270mil) on Top Layer And Pad U3-3(0mil,-1270mil) on Top Layer [Top Solder] Mask Sliver [2.5mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3143.317mil|Location2.X=3154.567mil|Location1.Y=2236.823mil|Location2.Y=2248.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3143.317mil|Location2.X=3154.567mil|Location1.Y=2236.823mil|Location2.Y=2248.073mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (2.082mil &lt; 10mil) Between Pad TP3-1(37mil,-1294mil) on Bottom Layer And Pad U3-9(95.5mil,-1270mil) on Multi-Layer [Bottom Solder] Mask Sliver [2.082mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.338mil|Location2.X=3016.588mil|Location1.Y=2237.282mil|Location2.Y=2248.532mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3005.338mil|Location2.X=3016.588mil|Location1.Y=2237.282mil|Location2.Y=2248.532mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (1.71mil &lt; 10mil) Between Pad TP1-1(-37mil,-1293mil) on Bottom Layer And Pad U3-8(-95.5mil,-1270mil) on Multi-Layer [Bottom Solder] Mask Sliver [1.71mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3074.336mil|Location2.X=3085.586mil|Location1.Y=2224.202mil|Location2.Y=2235.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\vojislav\Documents\Projects\nodemcu-devkit-v1.0\NODEMCU_DEVKIT_V1.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3074.336mil|Location2.X=3085.586mil|Location1.Y=2224.202mil|Location2.Y=2235.452mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (6.952mil &lt; 10mil) Between Pad TP1-1(-37mil,-1293mil) on Bottom Layer And Pad TP3-1(37mil,-1294mil) on Bottom Layer [Bottom Solder] Mask Sliver [6.952mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
