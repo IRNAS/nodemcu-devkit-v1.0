@@ -191,8 +191,101 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BXJPLSQQ
 
+[Document10]
+DocumentPath=NodeMCU_Job.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Design Rule Check - NODEMCU_DEVKIT_V1.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\NC Drill\NODEMCU_DEVKIT_V1.0-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\NC Drill\NODEMCU_DEVKIT_V1.0-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\NC Drill\NODEMCU_DEVKIT_V1.0.DRL
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\NC Drill\NODEMCU_DEVKIT_V1.0.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GM29
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\NC Drill\NODEMCU_DEVKIT_V1.0.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.REP
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for NODEMCU_DEVKIT_V1.0\Gerber\NODEMCU_DEVKIT_V1.0.RUL
 DItemRevisionGUID=
 
 [Configuration1]
@@ -246,7 +339,7 @@ OutputDir=
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=CadnetixNetlist
 OutputName1=Cadnetix Netlist
@@ -367,7 +460,7 @@ OutputDefault23=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
@@ -498,7 +591,7 @@ PageOptions19=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -520,7 +613,7 @@ OutputDefault3=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Board Stack Report
 OutputName1=Report Board Stack
@@ -614,7 +707,7 @@ Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLaye
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Script
 OutputName1=Script Output
@@ -661,7 +754,7 @@ OutputDefault6=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -841,7 +934,7 @@ PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Configuration compliance
 OutputName1=Environment configuration compliance check
@@ -880,7 +973,7 @@ OutputDefault6=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=\\http://192.168.1.1:631\printserver
+TargetPrinter=Canon MB2000 series Printer WS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AutoCAD dwg/dxf PCB
 OutputName1=AutoCAD dwg/dxf File PCB
