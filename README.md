@@ -6,6 +6,14 @@ The NodeMCU is gate tool for WiFi development, but it has some issues. The bigge
 
 For further details please check the [PDF schematics](https://github.com/IRNAS/nodemcu-devkit-v1.0/blob/nodeMCU-irnas-v0.1/Project%20Outputs%20for%20NODEMCU_DEVKIT_V1.0/NodeMCU-irnas-v0_1.PDF) of the board. All issues with the latest release can be found in the [Issue](https://github.com/IRNAS/nodemcu-devkit-v1.0/issues) section of the repository.
 
+### Changes:
+* USB - UART brigde is powered with 5V instede of 3V3
+* added USB and 5V test pads
+* added fuse
+* added solder jumper after the 3V3 regulator
+* added solder jumper for GPIO LED
+* added I2C pull up resistors
+
 ### Latest release: [v0.1](https://github.com/IRNAS/nodemcu-devkit-v1.0/releases/tag/v0.1)
 
 Development kit for ESP8266.
